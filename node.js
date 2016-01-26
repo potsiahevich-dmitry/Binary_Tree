@@ -23,9 +23,11 @@ class Node {
 		if (nodeValue == data){
 			return true;
 		} else if (nodeValue > data && this.left != null){
-			this.left.contains(data);
+			return this.left.contains(data);
 		} else if (nodeValue < data && this.right != null){
-			this.right.contains(data);
-		} else return false;
+			 return this.right.contains(data);
+		} else {
+			return false;
+		}
 	}
 }

@@ -15,11 +15,7 @@ class BinaryTree {
 	}
 		
 	contains(data) {
-		if (!this.data){
-			this.root.contains(data);
-		}
-		
-		
+		return this.root.contains(data);	
 	}
 
 	remove(data) {
