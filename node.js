@@ -19,7 +19,6 @@ class Node {
 	}
 	contains(data){
 		var nodeValue = this.data;
-		console.log(this.data);
 		if (nodeValue == data){
 			return true;
 		} else if (nodeValue > data && this.left != null){

@@ -42,19 +42,6 @@ var expectedBt = {
 	}
 };
 
-var bitree = new BinaryTree();
-bitree.insert(13);
-bitree.insert(10);
-bitree.insert(8);
-bitree.insert(18);
-bitree.insert(12);
-bitree.insert(11);
-bitree.insert(15);
-bitree.insert(6);
-bitree.insert(20);
-bitree.insert(7);
-console.log(bitree.contains(10));
-
 describe('BinaryTree', () => {
 	describe('#constructor', () => {
 		it('assigns null to root', () => {
