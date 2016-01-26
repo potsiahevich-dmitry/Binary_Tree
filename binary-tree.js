@@ -2,15 +2,24 @@
 
 class BinaryTree {
 	constructor() {
-
+		this.root = null;
 	}
 
 	insert(data) {
-
+		if (this.root == null){
+			this.root = new Node(data);
+		} else {
+			this.root.adder(data);
+		}
+		
 	}
-
+		
 	contains(data) {
-
+		if (!this.data){
+			this.root.contains(data);
+		}
+		
+		
 	}
 
 	remove(data) {
@@ -18,10 +27,11 @@ class BinaryTree {
 	}
 
 	size() {
-
+		return this.size();
 	}
 
 	isEmpty() {
 
 	}
 }
+	
