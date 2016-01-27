@@ -19,15 +19,19 @@ class BinaryTree {
 	}
 
 	remove(data) {
-
+		
 	}
 
 	size() {
-		return this.size();
+		if (this.root == null){
+			return 0;
+		} else {
+		return this.root.size();
+		}
 	}
 
 	isEmpty() {
-
+		return (this.root == null);
 	}
 }
 	

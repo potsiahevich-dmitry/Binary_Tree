@@ -6,6 +6,7 @@ class Node {
 		this.left = left || null;
 		this.right = right || null;
 	}
+
 	adder(data){
 		if (this.data > data){
 			if (this.left == null){
@@ -17,6 +18,7 @@ class Node {
 			} else this.right.adder(data);
 		}
 	}
+	
 	contains(data){
 		var nodeValue = this.data;
 		if (nodeValue == data){
@@ -28,5 +30,19 @@ class Node {
 		} else {
 			return false;
 		}
+	}
+	
+	size(){
+		var i = 0;
+		if (this.data != undefined){
+			i += 1;
+		}
+		if (this.left != null){
+			i += this.left.size();
+		}
+		if (this.right != null){
+			i += this.right.size();
+		}
+		return i;
 	}
 }
