@@ -19,7 +19,11 @@ class BinaryTree {
 	}
 
 	remove(data) {
-		
+		if (this.root != 0 && this.root.data != data){
+			this.root.remove(data);
+		} else if (this.root.data == data && this.root.left == null && this.root.right == null){
+			this.root = null;
+		}
 	}
 
 	size() {

@@ -32,6 +32,33 @@ class Node {
 		}
 	}
 	
+	remove(data){
+		if (this.left != null && this.right != null){
+			if (this.left.data == data){
+				if (this.left.left == null && this.left.right == null){
+					this.left = null;
+				} else if (this.left.left != null && this.left.right == null){
+					this.left = this.left.left;
+				} else if (this.left.left == null && this.left.right != null){
+					this.left = this.left.right;
+				} 
+			} else if (this.right.data == data){
+				if (this.right.left == null && this.right.right == null){
+					this.right = null;
+				} else if (this.right.left != null && this.right.right == null){
+					this.right = this.left.left;
+				} else if (this.right.left == null && this.right.right != null){
+					this.right = this.left.right;
+				}
+			} else if (this.data > data && this.left != null){
+				this.left.remove(data);
+			} else if (this.data < data && this.right != null){
+				this.right.remove(data);
+			}
+		}
+	}
+	
+	
 	size(){
 		var i = 0;
 		if (this.data != undefined){
