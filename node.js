@@ -32,46 +32,6 @@ class Node {
 		}
 	}
 	
-	remove(data){
-		if (this.left != null){	
-			if (this.left.data == data){
-				if (this.left.left == null && this.left.right == null){
-					this.left = null;
-					return
-				} else if (this.left.left != null && this.left.right == null){
-					this.left = this.left.left;
-					return
-				} else if (this.left.left == null && this.left.right != null){
-					this.left = this.left.right;
-					return
-				}
-			}
-		}
-		if (this.right != null){
-			if (this.right.data == data){
-				if (this.right.left == null && this.right.right == null){
-					this.right = null;
-					return
-				} else if (this.right.left != null && this.right.right == null){
-					this.right = this.left.left;
-					return
-				} else if (this.right.left == null && this.right.right != null){
-					this.right = this.left.right;
-					return
-				} else {
-					this.right.data = this.right.left.data;
-					this.right.left = null;
-					return
-				}
-			}
-		}
-		if (this.data > data && this.left != null){
-			this.left.remove(data);
-		} else if (this.data < data && this.right != null){
-			this.right.remove(data);
-		}
-	}
-	
 	
 	size(){
 		var i = 0;
