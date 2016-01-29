@@ -18,21 +18,7 @@ class Node {
 			} else this.right.adder(data);
 		}
 	}
-	
-	contains(data){
-		var nodeValue = this.data;
-		if (nodeValue == data){
-			return true;
-		} else if (nodeValue > data && this.left != null){
-			return this.left.contains(data);
-		} else if (nodeValue < data && this.right != null){
-			 return this.right.contains(data);
-		} else {
-			return false;
-		}
-	}
-	
-	
+		
 	size(){
 		var i = 0;
 		if (this.data != undefined){

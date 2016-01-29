@@ -15,7 +15,17 @@ class BinaryTree {
 	}
 		
 	contains(data) {
-		return this.root.contains(data);	
+		var currentNode = this.root;
+		while (currentNode != null){
+			if (currentNode.data == data){
+				return true
+			} else {
+				if (currentNode.data > data){
+					currentNode = currentNode.left;
+				} else currentNode = currentNode.right;
+			}
+		}
+		return false
 	}
 
 	remove(data) {
