@@ -6,18 +6,6 @@ class Node {
 		this.left = left || null;
 		this.right = right || null;
 	}
-
-	adder(data){
-		if (this.data > data){
-			if (this.left == null){
-				this.left = new Node(data);
-			} else this.left.adder(data);
-		} else {
-			if (this.right == null){
-				this.right = new Node(data);
-			} else this.right.adder(data);
-		}
-	}
 		
 	size(){
 		var i = 0;
