@@ -27,11 +27,11 @@ class BinaryTree {
 	
 
 	size() {
-		if (this.root == null){
+	/*	if (this.root == null){
 			return 0;
 		} else {
 		return this.root.size();
-		}
+		}*/
 	}
 
 	isEmpty() {
