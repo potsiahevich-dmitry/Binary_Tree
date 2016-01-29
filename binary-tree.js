@@ -11,7 +11,7 @@ class BinaryTree {
 		} else {
 			this.root.adder(data);
 		}
-		
+		var currentNode = this
 	}
 		
 	contains(data) {
@@ -37,11 +37,11 @@ class BinaryTree {
 	
 
 	size() {
-	/*	if (this.root == null){
+		if (this.root == null){
 			return 0;
 		} else {
 		return this.root.size();
-		}*/
+		}
 	}
 
 	isEmpty() {
@@ -61,8 +61,8 @@ function remove(node, data){
 		} else if (data > node.data){
 			node.right = remove(node.right, data);
 		} else if (node.left != null && node.right != null){
-			node.data = minimum(node.right).data;
-			node.right = remove(node.right, node.right.data);
+			node.data = maximum(node.left).data;
+			node.left = remove(node.left, node.left.data);
 		} else {
 			if (node.left != null){
 				node = node.left;
@@ -73,10 +73,10 @@ function remove(node, data){
 		return node
 	}
 	
-function minimum(x){
-		if (x.left == null){
+function maximum(x){
+		if (x.right == null){
 			return x;
 		}
-		return minimum(x.left);
+		return maximum(x.right);
 	}
 	
