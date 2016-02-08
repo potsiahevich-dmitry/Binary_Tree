@@ -50,7 +50,7 @@ class BinaryTree {
 		if (this.root == null){
 			return 0;
 		} else {
-		return this.root.size();
+		return size(this.root);
 		}
 	}
 
@@ -87,3 +87,16 @@ function maximum(x){
 	return maximum(x.right);
 }
 	
+function size(node){
+	var i = 0;
+	if (node.data != undefined){
+		i += 1;
+	}
+	if (node.left != null){
+		i += size(node.left);
+	}
+	if (node.right != null){
+		i += size(node.right);
+	}
+	return i;
+}
